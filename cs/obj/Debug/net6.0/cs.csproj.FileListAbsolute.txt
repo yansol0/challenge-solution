@@ -1,0 +1,15 @@
+D:\dezrez_challenge\cs\bin\Debug\net6.0\cs.exe
+D:\dezrez_challenge\cs\bin\Debug\net6.0\cs.deps.json
+D:\dezrez_challenge\cs\bin\Debug\net6.0\cs.runtimeconfig.json
+D:\dezrez_challenge\cs\bin\Debug\net6.0\cs.dll
+D:\dezrez_challenge\cs\bin\Debug\net6.0\cs.pdb
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.csproj.AssemblyReference.cache
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.AssemblyInfoInputs.cache
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.AssemblyInfo.cs
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.csproj.CoreCompileInputs.cache
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.dll
+D:\dezrez_challenge\cs\obj\Debug\net6.0\refint\cs.dll
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.pdb
+D:\dezrez_challenge\cs\obj\Debug\net6.0\cs.genruntimeconfig.cache
+D:\dezrez_challenge\cs\obj\Debug\net6.0\ref\cs.dll
