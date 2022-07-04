@@ -16,28 +16,39 @@ const calculateDiscount = (countA, countB) => {
     return 20 * Math.floor(countA / 3) + 15 * Math.floor(countB / 2);
 };
 
+//  Main price calculation
 const calculateTotal = (items) => {
     let countA = 0;
     let countB = 0;
     let totalPrice = 0;
 
-    items
-        .trim()
-        .split('')
-        .forEach((item) => {
-            if (!item.match(/[a-zA-Z]/i)) {
-                throw new Error('Unexpected identifier, please check the provided items.');
-            }
+    try {
+        items
+            .trim()
+            .split('')
+            .forEach((item) => {
+                if (!item.match(/[abc]/i)) {
+                    throw new Error('Unexpected identifier, please check the provided items.');
+                }
 
-            totalPrice += prices[item];
-            if (item === 'A') countA++;
-            if (item === 'B') countB++;
-        });
+                totalPrice += prices[item];
+                if (item === 'A') countA++;
+                if (item === 'B') countB++;
+            });
 
-    return totalPrice - calculateDiscount(countA, countB);
+        return totalPrice - calculateDiscount(countA, countB);
+    } catch (error) {
+        console.log(error.message);
+    }
 };
 
+//  IO and interface
 readline.question(`Please provide items to be added to cart\n`, (items) => {
-    console.log(`Total price: ${calculateTotal(items.toUpperCase())}`);
+    const total = calculateTotal(items.toUpperCase());
+    if (total) {
+        console.log(`Total price: ${total}`);
+    } else {
+        console.log('Unable to calculate price.');
+    }
     readline.close();
 });

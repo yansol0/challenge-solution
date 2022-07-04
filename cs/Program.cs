@@ -1,4 +1,5 @@
-﻿Dictionary<char, int> prices = new Dictionary<char, int>(){
+﻿//  Prices object containing prices for each SKU
+Dictionary<char, int> prices = new Dictionary<char, int>(){
     {'A', 50},
     {'B', 30},
     {'C', 20},
@@ -10,14 +11,16 @@ int calculateDiscount(int countA, int countB) {
     return 20 * (countA / 3) + 15 * (countB / 2);
 }
 
-//  Prices object containing prices for each SKU
+//  Main price calculation
 int calculateTotal(string items) {
     int countA = 0;
     int countB = 0;
     int totalPrice = 0;
 
-    foreach (var item in items.Trim().ToUpper()) {
-        if (!Char.IsLetter(item)) {
+    foreach (var item in items.Trim().ToUpper()) 
+    {
+        if (!Char.IsLetter(item)) 
+        {
             throw new Exception("Invalid input");
         }
 
@@ -29,6 +32,7 @@ int calculateTotal(string items) {
     return totalPrice - calculateDiscount(countA, countB);
 }
 
+//  IO and interface
 Console.WriteLine("Please provide items to be added to cart\n");
 
 string? input = Console.ReadLine();
@@ -36,7 +40,14 @@ string? input = Console.ReadLine();
 Console.WriteLine("Items: " + input);
 
 if (input != null) {
-    Console.WriteLine("Total: " + calculateTotal(input));
+    try
+    {
+        Console.WriteLine("Total: " + calculateTotal(input));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
 } else {
     Console.WriteLine("Invalid input!");
 }
